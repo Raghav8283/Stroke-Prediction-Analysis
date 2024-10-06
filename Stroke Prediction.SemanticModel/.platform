@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Stroke Prediction"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "898a2cb5-eb5f-4717-b9a2-841d102d2df3"
+  }
+}

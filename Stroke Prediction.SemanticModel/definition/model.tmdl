@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["General_Details_table","Risk_Factors_Table","Measures (2)","Measure Table"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.136.1202.0 (24.09)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table General_Details_table
+ref table DateTableTemplate_2ab688ea-bd3c-4677-90ee-91f5b4c9a85f
+ref table Risk_Factors_Table
+ref table 'Measure Table'
+
+ref cultureInfo en-US
+

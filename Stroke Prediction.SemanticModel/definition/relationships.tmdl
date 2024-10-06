@@ -1,0 +1,6 @@
+relationship 5e828b81-8afd-36c2-69bb-6ea37c6dd3ca
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: General_Details_table.id
+	toColumn: Risk_Factors_Table.Patient_id
+

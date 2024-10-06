@@ -1,0 +1,254 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
+  "name": "4210b1f6cf6937fa7b4d",
+  "position": {
+    "x": 278.17322834645671,
+    "y": 453.54330708661416,
+    "z": 13000,
+    "height": 254.99212598425197,
+    "width": 248.94488188976379,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "violinPlot4D46EB9EB3A141D9BA2289793175D971",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Risk_Factors_Table"
+                    }
+                  },
+                  "Property": "stroke"
+                }
+              },
+              "queryRef": "Risk_Factors_Table.stroke",
+              "nativeQueryRef": "stroke"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Risk_Factors_Table"
+                        }
+                      },
+                      "Property": "avg_glucose_level"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Risk_Factors_Table.avg_glucose_level)",
+              "nativeQueryRef": "Sum of avg_glucose_level"
+            }
+          ]
+        },
+        "sampling": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Risk_Factors_Table"
+                    }
+                  },
+                  "Property": "Patient_id"
+                }
+              },
+              "queryRef": "Risk_Factors_Table.Patient_id",
+              "nativeQueryRef": "Patient_id"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataColours": [
+        {
+          "properties": {
+            "colourByCategory": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "categoryFillColour": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Risk_Factors_Table"
+                              }
+                            },
+                            "Property": "Patient_id"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "67L"
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Risk_Factors_Table"
+                              }
+                            },
+                            "Property": "stroke"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "categoryFillColour": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "And": {
+                    "Left": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Risk_Factors_Table"
+                              }
+                            },
+                            "Property": "Patient_id"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "210L"
+                          }
+                        }
+                      }
+                    },
+                    "Right": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Risk_Factors_Table"
+                              }
+                            },
+                            "Property": "stroke"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "1L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

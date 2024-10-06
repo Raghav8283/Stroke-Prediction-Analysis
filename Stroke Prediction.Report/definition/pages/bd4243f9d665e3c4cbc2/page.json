@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.2.0/schema.json",
+  "name": "bd4243f9d665e3c4cbc2",
+  "displayName": "Stroke Rate",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
+  "name": "86166fa1fbd36794e9ea",
+  "position": {
+    "x": 816,
+    "y": 34,
+    "z": 2000,
+    "height": 618,
+    "width": 398,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "General_Details_table"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "General_Details_table.id",
+              "nativeQueryRef": "id"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Risk_Factors_Table"
+                        }
+                      },
+                      "Property": "bmi"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Risk_Factors_Table.bmi)",
+              "nativeQueryRef": "Average of bmi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
+  "name": "9c43055cba013dc44bd1",
+  "position": {
+    "x": 366.86614173228344,
+    "y": 94.740157480314963,
+    "z": 2000,
+    "height": 265.07086614173227,
+    "width": 257.00787401574803
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Risk_Factors_Table"
+                    }
+                  },
+                  "Property": "smoking_status"
+                }
+              },
+              "queryRef": "Risk_Factors_Table.smoking_status",
+              "nativeQueryRef": "smoking_status",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Stroke_rate"
+                }
+              },
+              "queryRef": "Measure Table.Stroke_rate",
+              "nativeQueryRef": "Stroke_rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measure Table"
+                  }
+                },
+                "Property": "Stroke_rate"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Before'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
+                                  }
+                                },
+                                "Property": "Stroke_rate"
+                              }
+                            },
+                            "Right": {
+                              "RangePercent": {
+                                "Min": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "Measure Table"
+                                                  }
+                                                },
+                                                "Property": "Stroke_rate"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 3
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Max": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "Measure Table"
+                                                  }
+                                                },
+                                                "Property": "Stroke_rate"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 4
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Percent": 0.67
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'SignLow'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Measure Table"
+                                      }
+                                    },
+                                    "Property": "Stroke_rate"
+                                  }
+                                },
+                                "Right": {
+                                  "RangePercent": {
+                                    "Min": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "Measure Table"
+                                                      }
+                                                    },
+                                                    "Property": "Stroke_rate"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 3
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Max": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "Measure Table"
+                                                      }
+                                                    },
+                                                    "Property": "Stroke_rate"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 4
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Percent": 0.33
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 3,
+                                "Left": {
+                                  "Measure": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Measure Table"
+                                      }
+                                    },
+                                    "Property": "Stroke_rate"
+                                  }
+                                },
+                                "Right": {
+                                  "RangePercent": {
+                                    "Min": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "Measure Table"
+                                                      }
+                                                    },
+                                                    "Property": "Stroke_rate"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 3
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Max": {
+                                      "ScopedEval": {
+                                        "Expression": {
+                                          "Aggregation": {
+                                            "Expression": {
+                                              "ScopedEval": {
+                                                "Expression": {
+                                                  "Measure": {
+                                                    "Expression": {
+                                                      "SourceRef": {
+                                                        "Entity": "Measure Table"
+                                                      }
+                                                    },
+                                                    "Property": "Stroke_rate"
+                                                  }
+                                                },
+                                                "Scope": [
+                                                  {
+                                                    "AllRolesRef": {}
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "Function": 4
+                                          }
+                                        },
+                                        "Scope": []
+                                      }
+                                    },
+                                    "Percent": 0.67
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'SignMedium'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
+                                  }
+                                },
+                                "Property": "Stroke_rate"
+                              }
+                            },
+                            "Right": {
+                              "RangePercent": {
+                                "Min": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "Measure Table"
+                                                  }
+                                                },
+                                                "Property": "Stroke_rate"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 3
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Max": {
+                                  "ScopedEval": {
+                                    "Expression": {
+                                      "Aggregation": {
+                                        "Expression": {
+                                          "ScopedEval": {
+                                            "Expression": {
+                                              "Measure": {
+                                                "Expression": {
+                                                  "SourceRef": {
+                                                    "Entity": "Measure Table"
+                                                  }
+                                                },
+                                                "Property": "Stroke_rate"
+                                              }
+                                            },
+                                            "Scope": [
+                                              {
+                                                "AllRolesRef": {}
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "Function": 4
+                                      }
+                                    },
+                                    "Scope": []
+                                  }
+                                },
+                                "Percent": 0.33
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'CircleHigh'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Measure Table.Stroke_rate"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'FlashyRows'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

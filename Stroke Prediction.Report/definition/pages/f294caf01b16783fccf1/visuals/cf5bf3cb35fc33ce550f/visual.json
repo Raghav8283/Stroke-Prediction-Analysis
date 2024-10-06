@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.2.0/schema.json",
+  "name": "cf5bf3cb35fc33ce550f",
+  "position": {
+    "x": 407.88177339901478,
+    "y": 33.694581280788178,
+    "z": 1000,
+    "height": 618.02955665024626,
+    "width": 398.128078817734,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "General_Details_table"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "General_Details_table.id",
+              "nativeQueryRef": "id"
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Risk_Factors_Table"
+                        }
+                      },
+                      "Property": "avg_glucose_level"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Risk_Factors_Table.avg_glucose_level)",
+              "nativeQueryRef": "Average of avg_glucose_level"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
