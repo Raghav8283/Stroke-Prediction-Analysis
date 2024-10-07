@@ -72,7 +72,8 @@ The dataset includes individuals categorized by gender: Female, Male, NA (Not Av
 |  Females total_id's  | Avg_Age | Stroke%   |  Males total id's  |  Avg_Age  |  Stroke%  |
 |----------------------|---------|-----------|--------------------|-----------|-----------|
 |       2985             |  43.70  |  4.42%    |     2113           |   42.46%  |  5.02%    | 
-Not Much of a outliers here.
+
+Not much of a outliers here.
 
 
 ## Stroke occurrences based on different job types
